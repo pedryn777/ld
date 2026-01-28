@@ -1,0 +1,156 @@
+:root {
+  --azul: #0b3c6f;
+  --azul-escuro: #0f172a;
+  --cinza-claro: #f6f8fb;
+  --texto: #1f2937;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: var(--texto);
+  line-height: 1.8;
+}
+
+/* ANIMAÇÃO SUAVE */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: none;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0b3c6f, #0e5fa8);
+  color: white;
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+/* BOTÕES */
+.btn-primary,
+.btn-dark {
+  display: inline-block;
+  padding: 16px 34px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: var(--azul);
+}
+
+.btn-dark {
+  background: var(--azul-escuro);
+  color: #ffffff;
+}
+
+/* SEÇÕES */
+.section {
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.section.light {
+  background: var(--cinza-claro);
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.section p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* LISTA */
+.lista {
+  list-style: none;
+  max-width: 520px;
+  margin: 30px auto 0;
+}
+
+.lista li {
+  margin: 12px 0;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+/* CTA */
+.cta {
+  background: var(--azul);
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  padding: 35px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+  .hero,
+  .section {
+    padding: 140px 25%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
